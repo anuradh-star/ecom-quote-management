@@ -56,7 +56,7 @@ public class CommonUtil {
 	{
 		
 		msg="<p>Hello [[name]],</p>"
-				+ "<p>Thank you order <b>[[orderStatus]]</b>.</p>"
+				+ "<p>Thank you Quotation Request <b>[[orderStatus]]</b>.</p>"
 				+ "<p><b>Product Details:</b></p>"
 				+ "<p>Name : [[productName]]</p>"
 				+ "<p>Category : [[category]]</p>"
@@ -67,7 +67,7 @@ public class CommonUtil {
 		MimeMessage message = mailSender.createMimeMessage();
 		MimeMessageHelper helper = new MimeMessageHelper(message);
 
-		helper.setFrom("daspabitra55@gmail.com", "Shooping Cart");
+		helper.setFrom("ajit.diatm@gmail.com", "Shooping Cart");//TODO
 		helper.setTo(order.getOrderAddress().getEmail());
 
 		msg=msg.replace("[[name]]",order.getOrderAddress().getFirstName());

@@ -78,6 +78,7 @@ public class HomeController {
 
 	@GetMapping("/")
 	public String index(Model m) {
+		System.out.println("Base Class Called");
 
 		List<Category> allActiveCategory = categoryService.getAllActiveCategory().stream()
 				.sorted((c1, c2) -> c2.getId().compareTo(c1.getId())).limit(6).toList();
